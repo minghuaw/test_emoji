@@ -85,11 +85,16 @@
       background: #e3f2fd;
       color: #1565c0;
     }
+
+    .badge-colr {
+      background: #f3e5f5;
+      color: #7b1fa2;
+    }
   </style>
 </head>
 <body>
   <h1>Emoji Explorer</h1>
-  <p class="sub">Compare two emoji rendering engines side by side</p>
+  <p class="sub">Compare emoji rendering engines side by side</p>
 
   <div class="cards">
     <a class="card" href="noto.html">
@@ -104,6 +109,13 @@
       <h2>Twemoji</h2>
       <p>Twitter's open-source emoji — emoji rendered as SVG images</p>
       <span class="badge badge-svg">SVG</span>
+    </a>
+
+    <a class="card" href="twemoji-font.html">
+      <div class="icon">🖌️</div>
+      <h2>Twemoji COLR</h2>
+      <p>Twemoji packaged as a COLR/CPAL webfont via <code>@font-face</code></p>
+      <span class="badge badge-colr">Webfont</span>
     </a>
   </div>
 </body>
