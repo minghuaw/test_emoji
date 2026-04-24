@@ -3,95 +3,108 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Noto Color Emoji Demo</title>
+  <title>Emoji Explorer</title>
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Noto+Color+Emoji&display=swap');
-
     body {
-      font-family: sans-serif;
-      max-width: 640px;
-      margin: 40px auto;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      max-width: 600px;
+      margin: 80px auto;
       padding: 0 20px;
-      background: #f5f5f5;
+      background: #f0f2f5;
       color: #333;
+      text-align: center;
     }
 
     h1 {
-      text-align: center;
-      font-size: 1.8rem;
+      font-size: 2rem;
+      margin-bottom: 8px;
     }
 
-    .section {
-      background: #fff;
-      border-radius: 12px;
-      padding: 20px;
-      margin-bottom: 20px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-    }
-
-    .section h2 {
-      margin-top: 0;
-      font-size: 1.1rem;
+    p.sub {
       color: #666;
+      margin-bottom: 40px;
     }
 
-    .emoji {
-      font-family: 'Noto Color Emoji', sans-serif;
-      font-size: 2.5rem;
-      line-height: 1.6;
-      word-spacing: 0.3em;
+    .cards {
+      display: flex;
+      gap: 24px;
+      justify-content: center;
+      flex-wrap: wrap;
     }
 
-    .emoji-lg {
-      font-size: 4rem;
+    .card {
+      background: #fff;
+      border-radius: 16px;
+      padding: 32px;
+      width: 220px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      text-decoration: none;
+      color: inherit;
+      transition: transform 0.2s, box-shadow 0.2s;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
 
-    .emoji-xl {
-      font-size: 6rem;
-      text-align: center;
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+    }
+
+    .card .icon {
+      font-size: 3.5rem;
+      margin-bottom: 12px;
+    }
+
+    .card h2 {
+      margin: 0 0 6px;
+      font-size: 1.2rem;
+    }
+
+    .card p {
+      margin: 0;
+      font-size: 0.85rem;
+      color: #777;
+    }
+
+    .badge {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 3px 10px;
+      border-radius: 12px;
+      font-size: 0.75rem;
+      font-weight: 600;
+    }
+
+    .badge-font {
+      background: #e8f5e9;
+      color: #2e7d32;
+    }
+
+    .badge-svg {
+      background: #e3f2fd;
+      color: #1565c0;
     }
   </style>
 </head>
 <body>
-  <h1>Noto Color Emoji</h1>
+  <h1>Emoji Explorer</h1>
+  <p class="sub">Compare two emoji rendering engines side by side</p>
 
-  <div class="section emoji-xl">
-    😀 🎉 🌍 🚀 ❤️
-  </div>
+  <div class="cards">
+    <a class="card" href="noto.html">
+      <div class="icon">🎨</div>
+      <h2>Noto Color Emoji</h2>
+      <p>Google's COLR/CPAL color font — emoji rendered as a webfont</p>
+      <span class="badge badge-font">Webfont</span>
+    </a>
 
-  <div class="section">
-    <h2>Smileys & People</h2>
-    <div class="emoji">
-      😀 😃 😄 😁 😆 😅 🤣 😂 🙂 🙃 😉 😊 😇 🥰 😍 🤩 😘 😗 😚 😋 😛 🤑 🤗 🤭 🤫 🤔 😐 😑 😶 😏 😒 🙄 😬 🤥 😌 😔 😪 🤤 😴 😷 🤒 🤕 🤢 🤮 🤧 🥵 🥶 🥴 😵 🤯 🤠 🥳 😎 🤓 🧐 😕 😟 🙁 😮 😯 😲 😳 🥺 😢 😭 😤 😡 🤬 😈 👿 💀 ☠️ 💩 🤡 👹 👺 👻 👽 👾 🤖
-    </div>
-  </div>
-
-  <div class="section">
-    <h2>Animals & Nature</h2>
-    <div class="emoji">
-      🐶 🐱 🐭 🐹 🐰 🦊 🐻 🐼 🐨 🐯 🦁 🐮 🐷 🐸 🐵 🙈 🙉 🙊 🐒 🐔 🐧 🐦 🐤 🐣 🦆 🦅 🦉 🦇 🐺 🐗 🐴 🦄 🐝 🐛 🦋 🐌 🐞 🐜 🦟 🦗 🕷 🦂 🐢 🐍 🦎 🦖 🦕 🐙 🦑 🦐 🦀 🐡 🐠 🐟 🐬 🐳 🐋 🦈 🌲 🌳 🌴 🌵 🌾 🌿 ☘️ 🍀 🍁 🍂 🍃
-    </div>
-  </div>
-
-  <div class="section">
-    <h2>Food & Drink</h2>
-    <div class="emoji">
-      🍏 🍎 🍐 🍊 🍋 🍌 🍉 🍇 🍓 🫐 🍈 🍒 🍑 🥭 🍍 🥥 🥝 🍅 🍆 🥑 🥦 🥬 🥒 🌶 🫑 🌽 🥕 🧄 🧅 🥔 🍠 🫘 🥐 🍞 🥖 🥨 🧀 🥚 🍳 🥞 🧇 🥞 🧇 🥓 🥩 🍗 🍖 🦴 🌭 🍔 🍟 🍕 🫓 🥪 🥙 🧆 🌮 🌯 🥗 🥘 🫕 🥫 🍝 🍜 🍲 🍛 🍣 🍱 🥟 🦪 🍤 🍙 🍚 🍘 🍥 🥠 🥮 🍢 🍡 🍧 🍨 🍦 🍰 🎂 🧁 🥧 🍫 🍬 🍭 🍮 🍯 🍼 🥛 ☕ 🫖 🍵 🍶 🍾 🥂 🥃 🥤
-    </div>
-  </div>
-
-  <div class="section">
-    <h2>Activities & Sports</h2>
-    <div class="emoji">
-      ⚽ 🏀 🏈 ⚾ 🥎 🏐 🏉 🎱 🏓 🏸 🏒 🏑 🥍 🏏 🪃 🥅 ⛳ 🪁 🏹 🎣 🤿 🥊 🥋 🎽 🛹 🛼 🛷 ⛸ 🥌 🎿 ⛷ 🏂 🪂 🏋️ 🤼 🤸 🤺 ⛹ 🤾 🏌️ 🏇 🧘 🏄 🏊 🤽 🚣 🧗 🚵 🚴 🎪 🎭 🎨 🎬 🎤 🎧 🎼 🎹 🥁 🪘 🎷 🎺 🎸 🪕 🎻 🎲 ♟ 🎯 🎳 🎮
-    </div>
-  </div>
-
-  <div class="section">
-    <h2>Objects & Symbols</h2>
-    <div class="emoji">
-      ❤️ 🧡 💛 💚 💙 💜 🤎 🖤 🤍 💕 💞 💓 💗 💖 💘 💝 💟 ❣️ 💌 💋 💌 💋 👋 🤚 🖐 ✋ 👌 🤌 🤏 ✌️ 🤞 🫰 🫵 👐 🤲 🙌 🙏 🤝 💪 🦵 🦶 👂 🦻 👃 🧠 🦷 🦴 👀 👁 👅 👄 💡 🔦 🕯 💵 💴 💶 💷 🪙 💳 💎 🧰 🔧 🔨 ⚒ 🛠 ⛏ 🪓 🔫 🪜 🧲 🔮 🔬 🔭 📡 💉 🩸 💊 🩹 🩺 🚪 🪑 🛏 🛋 🪟 🪞 🚽 🪠 🚿 🛁 🪥 💈 🧴 🧷 🧹 🧺 🧻 🧼 🧽 🧯 🪣 🛒 🚬 ⚰️ ⚱️ 🏺 🔮 🪄
-    </div>
+    <a class="card" href="twemoji.html">
+      <div class="icon">🐦</div>
+      <h2>Twemoji</h2>
+      <p>Twitter's open-source emoji — emoji rendered as SVG images</p>
+      <span class="badge badge-svg">SVG</span>
+    </a>
   </div>
 </body>
 </html>
