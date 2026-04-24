@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Twemoji COLR Font Demo</title>
+  <title>Twemoji Mozilla COLR Font Demo</title>
   <style>
     @font-face {
-      font-family: 'Twemoji COLR';
-      src: url('https://cdn.jsdelivr.net/npm/twemoji-colr@latest/font/twemoji-colr.woff2') format('woff2');
+      font-family: 'Twemoji Mozilla';
+      src: url('Twemoji.Mozilla.ttf') format('truetype');
     }
 
-    /* body {
+    body {
       font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
       max-width: 640px;
       margin: 40px auto;
@@ -37,10 +37,10 @@
       margin-top: 0;
       font-size: 1.1rem;
       color: #a0aec0;
-    } */
+    }
 
     .emoji {
-      font-family: 'Twemoji COLR';
+      font-family: 'Twemoji Mozilla', sans-serif;
       font-size: 2.5rem;
       line-height: 1.6;
       word-spacing: 0.3em;
@@ -51,7 +51,7 @@
       text-align: center;
     }
 
-    /* .badge {
+    .badge {
       display: inline-block;
       background: #0f3460;
       color: #e94560;
@@ -83,17 +83,17 @@
 
     .back a:hover {
       text-decoration: underline;
-    } */
+    }
   </style>
 </head>
 <body>
   <div class="back"><a href="index.html">&larr; Back to Emoji Explorer</a></div>
 
-  <h1>Twemoji <span style="color:#e94560;">❤️</span></h1>
-  <p class="note">Twemoji rendered as a COLR/CPAL webfont via <code>@font-face</code></p>
+  <h1>Twemoji Mozilla <span style="color:#e94560;">❤️</span></h1>
+  <p class="note">Official Mozilla release — COLR/CPAL via <code>@font-face</code> (self-hosted TTF)</p>
 
   <div class="section">
-    <div class="badge">twemoji-colr</div>
+    <div class="badge">mozilla/twemoji-colr v0.7.0</div>
     <div class="emoji emoji-xl">
       😀 🎉 🌍 🚀 ❤️
     </div>
